@@ -1,0 +1,75 @@
+/* client/src/components/ProductDetailPage.css */
+.product-detail-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.product-detail-card {
+  display: flex;
+  gap: 3rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.product-detail-image-container {
+  flex-basis: 50%;
+}
+
+.product-detail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-detail-info {
+  flex-basis: 50%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-detail-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.product-detail-description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  flex-grow: 1;
+  margin-bottom: 2rem;
+}
+
+.product-detail-price {
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: #007bff;
+  margin-bottom: 2rem;
+}
+
+.add-to-cart-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.add-to-cart-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+.error-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #dc3545;
+}

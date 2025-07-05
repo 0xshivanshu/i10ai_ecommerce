@@ -1,0 +1,37 @@
+/* client/src/components/Header.css */
+.app-header {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+}
+
+.navigation a {
+  color: #555;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.navigation a:hover {
+  color: #007bff;
+}

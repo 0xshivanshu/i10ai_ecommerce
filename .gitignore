@@ -1,0 +1,13 @@
+# Dependencies in all folders
+node_modules
+
+# Environment variable files
+.env
+.env.*
+client/.env
+client/.env.*
+server/.env
+server/.env.*
+
+# Production build folder from client
+client/dist
