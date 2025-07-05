@@ -13,7 +13,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('http://localhost:5001/api/products');
+        const response = await fetch('https://i10ai-ecommerce.onrender.com/api/products');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

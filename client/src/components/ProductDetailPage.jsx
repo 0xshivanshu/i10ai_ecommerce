@@ -16,7 +16,7 @@ const ProductDetailPage = () => {
     const fetchProduct = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`http://localhost:5001/api/products/${id}`);
+        const response = await fetch(`https://i10ai-ecommerce.onrender.com/api/products/${id}`);
         if (!response.ok) {
           throw new Error('That product could not be found.');
         }
