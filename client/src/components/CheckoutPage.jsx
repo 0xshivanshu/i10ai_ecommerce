@@ -3,14 +3,13 @@
 import React, { useState, useContext } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
-import './CheckoutPage.css'; // We will create this CSS file next
+import './CheckoutPage.css';
 
 const CheckoutPage = () => {
   const { clearCart } = useContext(CartContext);
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Get the total from the state passed by the Link component in CartPage
   const { cartTotal } = location.state || { cartTotal: 0 };
   
   const [isLoading, setIsLoading] = useState(false);
@@ -18,13 +17,11 @@ const CheckoutPage = () => {
   const handleSimulatedPayment = (e) => {
     e.preventDefault();
     setIsLoading(true);
-
-    // Simulate a 2-second network request to a payment processor
     setTimeout(() => {
       console.log("Simulated payment processed successfully!");
       setIsLoading(false);
-      clearCart(); // Clear the cart after successful "payment"
-      navigate('/payment-success'); // Redirect to a success page
+      clearCart();
+      navigate('/payment-success');
     }, 2000); 
   };
 
