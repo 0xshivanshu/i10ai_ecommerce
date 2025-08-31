@@ -1,5 +1,6 @@
 // client/src/components/CartPage.jsx
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext.jsx';
 import './CartPage.css';
 
@@ -37,7 +38,14 @@ const CartPage = () => {
       </div>
       <div className="cart-summary">
         <h2 className="cart-total-price">Total: ₹{totalPrice.toFixed(2)}</h2>
-        <button className="checkout-button">Proceed to Checkout</button>
+        <Link
+          to="/checkout"
+          state={{ cartTotal: totalPrice }} // Pass the total price to the checkout page
+          className="checkout-button"
+          style={{ textDecoration: 'none', textAlign: 'center' }} // Optional: for button-like styling
+        >
+          Proceed to Checkout
+        </Link>
       </div>
     </div>
   );
