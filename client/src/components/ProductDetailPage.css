@@ -1,20 +1,32 @@
-/* client/src/components/ProductDetailPage.css */
 .product-detail-container {
   max-width: 1000px;
-  margin: 2rem auto;
+  margin: 3rem auto 4rem;
+  padding: 0 1rem;
 }
 
 .product-detail-card {
   display: flex;
   gap: 3rem;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  border-radius: 28px;
   overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  backdrop-filter: blur(18px);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  color: #e5e7eb;
 }
 
 .product-detail-image-container {
   flex-basis: 50%;
+  background: #020617;
 }
 
 .product-detail-image {
@@ -31,45 +43,61 @@
 }
 
 .product-detail-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0 0 1rem 0;
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .product-detail-description {
-  font-size: 1.1rem;
-  color: #555;
+  font-size: 1.05rem;
   line-height: 1.7;
+  color: #cbd5f5;
+  margin-bottom: 2.5rem;
   flex-grow: 1;
-  margin-bottom: 2rem;
 }
 
 .product-detail-price {
-  font-size: 2.25rem;
-  font-weight: 500;
-  color: #007bff;
-  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .add-to-cart-button {
-  background-color: #007bff;
-  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 14px;
   border: none;
-  padding: 1rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+
+  background: linear-gradient(90deg, #6366f1, #4f46e5);
+  box-shadow:
+    0 10px 25px rgba(99, 102, 241, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .add-to-cart-button:hover {
-  background-color: #0056b3;
-  transform: scale(1.02);
+  transform: translateY(-2px);
+  box-shadow:
+    0 18px 40px rgba(99, 102, 241, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .error-message {
   text-align: center;
   font-size: 1.2rem;
-  color: #dc3545;
+  margin-top: 4rem;
+  color: #f87171;
 }
